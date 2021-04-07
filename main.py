@@ -4,10 +4,12 @@
     ver. 0.1
 # """
 
-import funcs
+from funcs import App
 
-funcs.init()
+app = App()
 
-import handlers
+from handlers import bot_start as main
 
-funcs.bot.polling(none_stop = True)
+main(app.bot, app)
+
+app.bot.polling(none_stop = True)
