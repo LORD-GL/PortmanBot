@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-    Maded by LeLord
-    ver. 0.1
+    -------------------
+    | Maded by LeLord |
+    -------------------
+    ver. 1.0 04.11.2021
+    https://t.me/LORD_GL 
 # """
 
 from funcs import App
