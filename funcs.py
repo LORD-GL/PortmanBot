@@ -1,8 +1,8 @@
 import telebot
+from conf import Conf
 # functions class file
 class App():
     def __init__(self):    
-        from conf import Conf
         self.conf = Conf()
         self.bot = telebot.TeleBot(self.conf.HTTP_API)
 
@@ -11,6 +11,8 @@ class App():
         self.help_menu_init()
         self.end_menu_init()
         self.mode_menu_init()
+        self.own_callbck_init()
+        self.mng_callbck_init()
 
     # d
     def main_menu_init(self):
@@ -20,7 +22,8 @@ class App():
 
     def mode_menu_init(self):
         self.mode_keyboard = telebot.types.ReplyKeyboardMarkup(True, True)
-        self.mode_keyboard.row('Менторство для личного блога', 'Менторство для менеджеров')
+        self.mode_keyboard.row('Менторство для личного блога')
+        self.mode_keyboard.row('Менторство для менеджеров')
 
     def help_menu_init(self):
         self.connect_buy_keyboard = telebot.types.ReplyKeyboardMarkup(True, True)
@@ -28,4 +31,20 @@ class App():
 
     def end_menu_init(self):
         self.end_keyboard = telebot.types.ReplyKeyboardMarkup(True, True)
-        self.end_keyboard.row('Связь с админом', '/start')
+        self.end_keyboard.row('Связь с админом', 'Начало')
+
+    def own_callbck_init(self):
+        self.own_callbck_keyboard = telebot.types.InlineKeyboardMarkup()
+        self.own_callbck_keyboard.row(
+            telebot.types.InlineKeyboardButton("3490₽", callback_data = "3490"),
+            telebot.types.InlineKeyboardButton("7990₽", callback_data = "7990"),
+            telebot.types.InlineKeyboardButton("13990₽", callback_data = "13990")
+        )
+
+    def mng_callbck_init(self):
+        self.mng_callbck_keyboard = telebot.types.InlineKeyboardMarkup()
+        self.mng_callbck_keyboard.row(
+            telebot.types.InlineKeyboardButton("3990₽", callback_data = "3990"),
+            telebot.types.InlineKeyboardButton("8990₽", callback_data = "8990"),
+            telebot.types.InlineKeyboardButton("14990₽", callback_data = "14990")
+        )
