@@ -44,7 +44,7 @@ class App():
     def mng_callbck_init(self):
         self.mng_callbck_keyboard = telebot.types.InlineKeyboardMarkup()
         self.mng_callbck_keyboard.row(
-            telebot.types.InlineKeyboardButton("4090₽", callback_data = "3990"),
+            telebot.types.InlineKeyboardButton("4090₽", callback_data = "4090"),
             telebot.types.InlineKeyboardButton("9090₽", callback_data = "9090"),
             telebot.types.InlineKeyboardButton("15090₽", callback_data = "15090")
         )
