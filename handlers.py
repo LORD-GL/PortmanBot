@@ -26,13 +26,13 @@ def bot_start(bot, App):
     @bot.message_handler(func = lambda message: message.text == "Менторство для личного блога")
     def own_usage(message):
         price = """
-Я все сам 3490₽/1290грн
-С куратором было бы гуд 7990₽/3350грн
-Хочу пендель от Алисы 13990₽/5950грн
+Я все сам 3590₽/1290грн
+С куратором было бы гуд 8090₽/3350грн
+Хочу пендель от Алисы 14090₽/5950грн
         """
         bot.send_message(message.chat.id, price, reply_markup = App.own_callbck_keyboard)
 
-    @bot.callback_query_handler(func = lambda message: message.data == "3490")
+    @bot.callback_query_handler(func = lambda message: message.data == "3590")
     def p_3490(message):
         serv = """
 В этот тариф  входит:
@@ -41,7 +41,7 @@ def bot_start(bot, App):
         """
         bot.send_message(message.from_user.id, serv, reply_markup = App.connect_buy_keyboard)
 
-    @bot.callback_query_handler(func = lambda message: message.data == "7990")
+    @bot.callback_query_handler(func = lambda message: message.data == "8090")
     def p_7990(message):
         serv = """
 В этот тариф  входит:
@@ -53,7 +53,7 @@ def bot_start(bot, App):
         """
         bot.send_message(message.from_user.id, serv, reply_markup = App.connect_buy_keyboard)
 
-    @bot.callback_query_handler(func = lambda message: message.data == "13990")
+    @bot.callback_query_handler(func = lambda message: message.data == "14090")
     def p_13990(message):
         serv = """
 В этот тариф  входит:
@@ -69,13 +69,13 @@ def bot_start(bot, App):
     @bot.message_handler(func = lambda message: message.text == "Менторство для менеджеров")
     def mng_usage(message):
         price = """ 
-Я все сам 3990₽/1490грн
-С куратором было бы гуд 8990₽/3710грн 
-Хочу пендель от Алисы 14990₽/6300грн
+Я все сам 4090₽/1490грн
+С куратором было бы гуд 9090₽/3710грн 
+Хочу пендель от Алисы 15090₽/6300грн
 """
         bot.send_message(message.chat.id, price, reply_markup = App.mng_callbck_keyboard)
 
-    @bot.callback_query_handler(func = lambda message: message.data == "3990")
+    @bot.callback_query_handler(func = lambda message: message.data == "4090")
     def p_3990(message):
         serv = """
 В этот тариф  входит:
@@ -84,7 +84,7 @@ def bot_start(bot, App):
         """
         bot.send_message(message.from_user.id, serv, reply_markup = App.connect_buy_keyboard)
 
-    @bot.callback_query_handler(func = lambda message: message.data == "8990")
+    @bot.callback_query_handler(func = lambda message: message.data == "9090")
     def p_8990(message):
         serv = """
 В этот тариф  входит:
@@ -96,7 +96,7 @@ def bot_start(bot, App):
         """
         bot.send_message(message.from_user.id, serv, reply_markup = App.connect_buy_keyboard)
 
-    @bot.callback_query_handler(func = lambda message: message.data == "14990")
+    @bot.callback_query_handler(func = lambda message: message.data == "15090")
     def p_14990(message):
         serv = """
 В этот тариф  входит:
@@ -123,4 +123,4 @@ Saliukova Alina
     # admin help
     @bot.message_handler(func = lambda message: message.text == "Связь с админом")
     def adm_help(message):
-        bot.send_message(message.chat.id, "Наш админ: @kidkate_moto", reply_markup = App.end_keyboard)
+        bot.send_message(message.chat.id, "Наш админ: @portmanalisa", reply_markup = App.end_keyboard)
