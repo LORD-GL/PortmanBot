@@ -26,9 +26,9 @@ def bot_start(bot, App):
     @bot.message_handler(func = lambda message: message.text == "Менторство для личного блога")
     def own_usage(message):
         price = """
-Я все сам 3490₽ 
-С куратором было бы гуд 7990₽ 
-Хочу пендель от Алисы 13990₽
+Я все сам 3490₽/1290грн
+С куратором было бы гуд 7990₽/3350грн
+Хочу пендель от Алисы 13990₽/5950грн
         """
         bot.send_message(message.chat.id, price, reply_markup = App.own_callbck_keyboard)
 
@@ -69,9 +69,9 @@ def bot_start(bot, App):
     @bot.message_handler(func = lambda message: message.text == "Менторство для менеджеров")
     def mng_usage(message):
         price = """ 
-Я все сам 3990₽
-С куратором было бы гуд 8990₽ 
-Хочу пендель от Алисы 14990₽
+Я все сам 3990₽/1490грн
+С куратором было бы гуд 8990₽/3710грн 
+Хочу пендель от Алисы 14990₽/6300грн
 """
         bot.send_message(message.chat.id, price, reply_markup = App.mng_callbck_keyboard)
 
