@@ -6,6 +6,7 @@ def bot_start(bot, App):
     @bot.message_handler(func = lambda message: message.text == "Начало")
     def start_menu(message):
         grettings = """
+!!! Начало !!!
 Привет малых , тебя приветствует бот по
 экспертным продуктам от Алисы Портман 🧠
     
