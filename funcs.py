@@ -36,15 +36,15 @@ class App():
     def own_callbck_init(self):
         self.own_callbck_keyboard = telebot.types.InlineKeyboardMarkup()
         self.own_callbck_keyboard.row(
-            telebot.types.InlineKeyboardButton("3590₽", callback_data = "3590"),
-            telebot.types.InlineKeyboardButton("8090₽", callback_data = "8090"),
-            telebot.types.InlineKeyboardButton("14090₽", callback_data = "14090")
+            telebot.types.InlineKeyboardButton("3490₽", callback_data = "3490"),
+            telebot.types.InlineKeyboardButton("8990₽", callback_data = "8990"),
+            telebot.types.InlineKeyboardButton("15 990₽", callback_data = "15 990")
         )
 
     def mng_callbck_init(self):
         self.mng_callbck_keyboard = telebot.types.InlineKeyboardMarkup()
         self.mng_callbck_keyboard.row(
-            telebot.types.InlineKeyboardButton("4090₽", callback_data = "4090"),
-            telebot.types.InlineKeyboardButton("9090₽", callback_data = "9090"),
-            telebot.types.InlineKeyboardButton("15090₽", callback_data = "15090")
+            telebot.types.InlineKeyboardButton("3990₽", callback_data = "3990"),
+            telebot.types.InlineKeyboardButton("9990₽", callback_data = "9990"),
+            telebot.types.InlineKeyboardButton("16 990₽", callback_data = "16 990")
         )
